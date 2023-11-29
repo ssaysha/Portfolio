@@ -1,0 +1,301 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+header {
+  width: 100%;
+  height: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: blue;
+  margin: 0;
+  padding: 5px 50px 5px 50px;
+}
+
+header .left {
+  height: 100%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .left .me {
+  color: aliceblue;
+  font-size: 45px;
+  font-weight: 900;
+  margin: 0 15px;
+}
+
+header .left .menu {
+  visibility: hidden;
+  margin-left: -50px;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: dodgerblue;
+  border: none;
+  border-radius: 5px;
+}
+
+header .left .menu div {
+  border-bottom: 3px solid aliceblue;
+  width: 40px;
+  margin: 5px auto;
+}
+
+header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+header .nav button {
+  width: 20%;
+  height: 50px;
+  border: none;
+  background-color: dodgerblue;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+header .nav button a {
+  text-decoration: none;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+header .nav button:hover {
+  background-color: red;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1200px;
+  height: 100vh;
+  margin: 50px;
+}
+
+.secOne {
+  height: 300px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  margin: 50px 0;
+}
+
+.secOne .myPic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.secOne .myPic img {
+  width: 250px;
+  height: 250px;
+  border: 11px solid blue;
+  border-radius: 50%;
+}
+
+.secOne .right {
+  width: 50%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(dodgerblue), to(aliceblue));
+  background: linear-gradient(to right, dodgerblue, aliceblue);
+  border: 3px solid blue;
+  border-radius: 0 250px 0 250px;
+}
+
+.secOne .right p {
+  text-align: justify;
+  padding: 30px 10px 20px 50px;
+  font-size: 19px;
+  color: navy;
+}
+
+.grid-container {
+  width: 100%;
+  height: 150px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33.3% 33.3% 33.3%;
+      grid-template-columns: 33.3% 33.3% 33.3%;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+  gap: 20px;
+  padding: 10px 0 10px 0;
+}
+
+.grid-container .grid-item {
+  padding: 20px;
+  border: none;
+  border-radius: 30px;
+  background: -webkit-gradient(linear, left top, right top, from(dodgerblue), to(blue));
+  background: linear-gradient(to right, dodgerblue, blue);
+  -webkit-box-shadow: 7px 7px 5px dodgerblue;
+          box-shadow: 7px 7px 5px dodgerblue;
+  color: beige;
+  font-size: 21px;
+  font-weight: 500;
+  z-index: 2;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.grid-item:hover {
+  color: red;
+}
+
+footer {
+  background-color: blue;
+  color: beige;
+  font-size: 21px;
+  font-weight: 500;
+  text-align: center;
+  padding: 15px 50px 15px 50px;
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .links {
+  margin: 0 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: aliceblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .linkedin {
+  width: 100px;
+  border-radius: 30px;
+}
+
+footer .linkedin a {
+  text-decoration: none;
+  color: blue;
+}
+
+@media only screen and (max-width: 850px) {
+  body {
+    background-color: red;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: pink;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-color: green;
+  }
+}
+/*# sourceMappingURL=style.css.map */
