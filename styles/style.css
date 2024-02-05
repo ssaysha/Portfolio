@@ -6,6 +6,7 @@
 
 body {
   background-color: aliceblue;
+  margin: 0;
 }
 
 header {
@@ -31,7 +32,7 @@ header {
 
 header .left {
   height: 100%;
-  width: 50%;
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,14 +52,13 @@ header .left .me {
   color: aliceblue;
   font-size: 45px;
   font-weight: 900;
-  margin: 0 15px;
+  margin-left: -65px;
 }
 
-header .left .menu {
+header .left #menu {
   visibility: hidden;
-  margin-left: -50px;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,15 +75,16 @@ header .left .menu {
   background-color: dodgerblue;
   border: none;
   border-radius: 5px;
+  padding: 0 5px 0 5px;
 }
 
-header .left .menu div {
-  border-bottom: 3px solid aliceblue;
-  width: 40px;
+header .left #menu div {
+  border-bottom: 4px solid aliceblue;
+  width: 50px;
   margin: 5px auto;
 }
 
-header .nav {
+header #nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,11 +98,11 @@ header .nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
+  width: 60%;
   height: 100%;
 }
 
-header .nav button {
+header #nav button {
   width: 20%;
   height: 50px;
   border: none;
@@ -110,17 +111,21 @@ header .nav button {
   font-weight: 700;
 }
 
-header .nav button a {
+header #nav button a {
   text-decoration: none;
   color: aliceblue;
   cursor: pointer;
 }
 
-header .nav button:hover {
+header #nav button:hover {
   background-color: red;
 }
 
-main {
+header #nav .home {
+  border: 5px solid red;
+}
+
+.main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,13 +139,15 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 1200px;
-  height: 100vh;
-  margin: 50px;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 50px 0 50px;
 }
 
 .secOne {
-  height: 300px;
+  height: 50vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,17 +162,15 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
-  margin: 50px 0;
 }
 
 .secOne .myPic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -176,41 +181,66 @@ main {
 .secOne .myPic img {
   width: 250px;
   height: 250px;
-  border: 11px solid blue;
+  border: 9px solid blue;
   border-radius: 50%;
 }
 
 .secOne .right {
-  width: 50%;
-  height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(dodgerblue), to(aliceblue));
-  background: linear-gradient(to right, dodgerblue, aliceblue);
-  border: 3px solid blue;
-  border-radius: 0 250px 0 250px;
+  width: 60%;
+  height: 90%;
+  border: 5px solid aliceblue;
+  border-radius: 10px;
+  background-color: dodgerblue;
+  -webkit-box-shadow: 20px 20px 15px dodgerblue;
+          box-shadow: 20px 20px 15px dodgerblue;
+  z-index: 2;
+  color: aliceblue;
+  font-size: 19px;
+  font-weight: 500;
+  margin: 0 50px;
+  padding: 10px;
 }
 
 .secOne .right p {
-  text-align: justify;
-  padding: 30px 10px 20px 50px;
-  font-size: 19px;
-  color: navy;
+  line-height: 2rem;
+}
+
+.secOne .right .aisha {
+  color: blue;
+  font-weight: 700;
 }
 
 .grid-container {
   width: 100%;
-  height: 150px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 33.3% 33.3% 33.3%;
-      grid-template-columns: 33.3% 33.3% 33.3%;
-  -ms-grid-rows: 50% 50%;
-      grid-template-rows: 50% 50%;
+  -ms-grid-columns: (minmax(130px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
   gap: 20px;
-  padding: 10px 0 10px 0;
+  margin: 30px 0 0;
+  padding: 15px 0 15px 0;
 }
 
 .grid-container .grid-item {
-  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85px;
+  padding: 15px;
+  text-align: center;
   border: none;
   border-radius: 30px;
   background: -webkit-gradient(linear, left top, right top, from(dodgerblue), to(blue));
@@ -218,15 +248,14 @@ main {
   -webkit-box-shadow: 7px 7px 5px dodgerblue;
           box-shadow: 7px 7px 5px dodgerblue;
   color: beige;
-  font-size: 21px;
+  font-size: 19px;
   font-weight: 500;
-  z-index: 2;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 .grid-item:hover {
   color: red;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
 }
 
 footer {
@@ -281,21 +310,297 @@ footer .linkedin a {
   color: blue;
 }
 
-@media only screen and (max-width: 850px) {
-  body {
-    background-color: red;
+footer .links:hover {
+  background-color: red;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+@media screen and (min-width: 150px) and (max-width: 250px) {
+  header .left #menu {
+    visibility: visible;
+    width: 30px;
+    height: 30px;
+    margin-left: -35px;
+  }
+  header .left #menu div {
+    width: 20px;
+    border-bottom: 2px solid aliceblue;
+    margin: 3px auto;
+  }
+  header .left .me {
+    margin-left: 15px;
+    font-size: 17px;
+  }
+  header #nav button {
+    visibility: hidden;
+  }
+  .main {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 10px;
+  }
+  .secOne {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 0 10px 0;
+  }
+  .secOne .myPic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 20px auto;
+  }
+  .secOne .myPic img {
+    width: 125px;
+    height: 125px;
+    border: 5px solid blue;
+  }
+  .secOne .right {
+    margin: 15px 0;
+    width: 90%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-radius: 30px;
+    padding: 5px;
+  }
+  .secOne .right p {
+    font-size: 13px;
+  }
+  .grid-container {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .grid-container .grid-item {
+    font-size: 16px;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  footer .links {
+    width: 20px;
+    height: 20px;
+    margin: 10px 0 0;
+  }
+  footer .links img {
+    width: 13px;
+    height: 13px;
+  }
+  footer .linkedin {
+    width: 75px;
+    height: 30px;
+    font-size: 15px;
   }
 }
 
-@media only screen and (max-width: 768px) {
-  body {
-    background-color: pink;
+@media only screen and (min-width: 251px) and (max-width: 850px) {
+  .main {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .secOne {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 0 10px 0;
+  }
+  .secOne .myPic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 20px auto;
+  }
+  .secOne .myPic img {
+    width: 145px;
+    height: 145px;
+    border: 5px solid blue;
+  }
+  .secOne .right {
+    margin: 15px 0;
+    width: 90%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-radius: 30px;
+    padding: 15px;
+  }
+  .secOne .right p {
+    font-size: 15px;
+  }
+  .grid-container {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .grid-container .grid-item {
+    font-size: 16px;
   }
 }
 
-@media only screen and (max-width: 480px) {
-  body {
-    background-color: green;
+@media only screen and (min-width: 251px) and (max-width: 450px) {
+  header .left #menu {
+    visibility: visible;
+    width: 40px;
+    height: 40px;
+  }
+  header .left #menu div {
+    width: 30px;
+    border-bottom: 2px solid aliceblue;
+  }
+  header .left .me {
+    margin-left: 15px;
+    font-size: 19px;
+  }
+  header #nav button {
+    visibility: hidden;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 300px;
+    margin: 20px 0 0;
+    font-size: 27px;
+  }
+  footer .links {
+    margin: 5px 0;
+  }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 750px) {
+  header .left {
+    width: 25%;
+  }
+  header .left #menu {
+    visibility: hidden;
+  }
+  header .left .me {
+    font-size: 17px;
+    margin-left: -65px;
+  }
+  header #nav {
+    width: 75%;
+  }
+  header #nav button {
+    visibility: visible;
+    height: 30px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .grid-container {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 15px 0 15px 0;
+  }
+  footer .links {
+    width: 20px;
+    height: 20px;
+  }
+  footer .links img {
+    width: 13px;
+    height: 13px;
+  }
+  footer .linkedin {
+    width: 75px;
+    height: 30px;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 751px) and (max-width: 850px) {
+  header .left .me {
+    font-size: 35px;
+  }
+  header #nav button {
+    font-size: 15px;
+    font-weight: 500;
   }
 }
 /*# sourceMappingURL=style.css.map */

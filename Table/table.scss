@@ -1,0 +1,57 @@
+div {
+    overflow: auto;
+}
+table {
+   width: 150%;
+   border-collapse: collapse;
+   background-color: azure;
+   text-align: center;
+}
+caption {
+   font-weight: 900;
+   color: red;
+   font-size: 25px;
+   text-align: left;
+}
+th, td{
+   border: 2px solid peru;
+   padding: 5px;
+}
+
+tr:nth-child(even) {
+   background-color: gold;
+}
+th {
+   color: burlywood;
+   font-weight: 900;
+   font-size: 19px;
+}
+tr {
+   color: brown;
+}
+tr:hover {
+   background-color: yellowgreen;
+}
+#firstRaw {
+   font-weight: 500;
+   font-size: 17px;
+}
+.owner {
+   position: fixed;
+   top: 50%;
+   padding: 10px 10px 10px 50px;
+   width: 75%;
+   height: fit-content;
+   border: none;
+   border-radius: 0 50px 50px 0;
+   background-image: linear-gradient(to right, peru, goldenrod);
+   color:  snow;
+   font-size: 17px;
+   font-weight: 700;
+   z-index: 1;
+   a {
+       text-decoration: none;
+       color: yellow;
+       font-size: 21px;
+   }
+   }

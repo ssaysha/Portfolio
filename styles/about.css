@@ -3,6 +3,8 @@ body {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100vh;
   background-color: aliceblue;
 }
 
@@ -31,5 +33,17 @@ marquee {
 
 a {
   text-decoration: none;
+}
+
+@media screen and (min-width: 150px) and (max-width: 500px) {
+  .container {
+    width: 80%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-right: 15%;
+    margin: 10%;
+    padding: 20px;
+  }
 }
 /*# sourceMappingURL=about.css.map */

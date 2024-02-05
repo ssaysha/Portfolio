@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+main {
+    font-family: sans-serif;
+    margin: 50px auto;
+    padding: 20px;
+    width: 80%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(218, 23%, 16%);
+}
+@media screen and (max-width: 375px) {
+    main {
+    width: 100%;
+    height: 100%;
+    }
+}
+    #Advice {
+        width: 350px;
+        min-height: 200px;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        color: hsl(193, 38%, 86%);
+        background-color: hsl(217, 19%, 24%);
+        @media screen and (max-width: 375) {
+            height: 90%;
+            width: 70%;
+        }
+    }
+        p {
+            width: 70%;
+            height: fit-content;
+            line-height: 1.5rem;
+        }
+        #advice {
+            padding: 0 0 10px 0;
+            font-size: 14px;
+            font-weight: 300;
+            color: hsl(150, 100%, 66%);
+        }
+        #divider {
+            width: 70%;
+            height: fit-content;
+            padding: 20px 0 20px 0;
+        }
+        .dice {
+            background-color: hsl(150, 100%, 66%);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            border-radius: 100px;
+            margin-bottom: -5%;
+            transition: box-shadow 0.3s ease;
+            img {
+                width: 30px;
+                height: 30px;
+                border: none;
+                border-radius: 5px;
+            }
+        }
+        .dice:hover {
+            box-shadow: 0 0 20px hsl(150, 100%, 66%);
+            cursor: pointer;
+        }
+    @media screen and (min-width: 150px) and (max-width: 600px){
+        #Advice {
+        margin-top: 50px;
+        width: 90%;
+        // height: 300px;
+        }
+        #advice {
+            padding-top: 30px;
+        }
+        .dice {
+            width: 30px;
+            height: 30px;
+            img {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+    .attribution {
+        text-align: center;
+        margin-top: 100px;
+        color: hsl(193, 38%, 86%);
+        font-weight: 500;
+        a {
+            color: dodgerblue;
+            text-decoration: none;
+        }
+        a:hover {
+            color: hsl(150, 100%, 66%);
+            font-size: 20px;
+        }
+    }
+/*
+alternative therapies, breastfeeding, cost-effectiveness, cultural studies, gynecology, 
+health policy, menopause, postpartum care, substance abuse interventions, 
+and the woman's experience of birth and midwifery care.
+
+
+
+
+*/

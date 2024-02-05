@@ -1,6 +1,17 @@
+body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+marquee {h1 {
+    color: red;
+    text-align: center;
+}}
 .grid-container {
     width: 100%;
-    height: 95vh;
+    height: 120vh;
     display: grid;
     grid-template-areas: auto auto auto;
 .grid-item {
@@ -14,7 +25,21 @@
     font-size: 21px;
     font-weight: 500;
     z-index: -1;
- 
-    // transition: 1s;
+}
+.grid-item:hover {
+    color: red;
+}
+}
+
+// media query
+@media only screen and (max-width: 150px) {
+    .grid-container{
+        width: 100%;
+        height: fit-content;
+        .grid-item {
+            text-align: center;
+            margin: 10px 20px;
+            padding: 5px;
+        }
 }
 }

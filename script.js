@@ -1,15 +1,34 @@
+
 function home() {
     location.reload("..index.html")
 }
-function aboutMe() {
-    location.replace("../about.html")
+function covid19() {
+    location.assign("../Covid-19-Website-Main")
 }
-function contactMe() {
-    location.replace("../contact.html")
+function skilledElearning() {
+    location.assign("../skilled e-learning landing page")
 }
-function myWork() {
-    location.replace("../work.html")
+function form() {
+    location.assign("../form")
 }
-function hiddenMenu() {
-    document.getElementsByClassName("menu").style.display = "none";
+function facebook() {
+    location.assign("../Facebook")
+}
+function calc() {
+    location.assign("../CALC")
+}
+function stopWatch() {
+    location.assign("../time")
+}
+function menu() {
+   let x = document.getElementById("menu")
+   let y = document.getElementById("nav")
+    if (x.style.visibility = "visible"){
+        x.style.visibility="hidden"
+        y.style.visibility = "visible"
+       } else {
+        x.style.visibility = "visible"
+
+
+    }
 }
